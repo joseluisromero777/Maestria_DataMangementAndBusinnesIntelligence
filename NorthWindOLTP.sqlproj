@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>NorthWindOLTP</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{4b9b7c85-652c-4fdf-904b-cd3eef585167}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql170DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>NorthWindOLTP</RootNamespace>
+    <AssemblyName>NorthWindOLTP</AssemblyName>
+    <ModelCollation>3082,CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <DefaultCollation>Modern_Spanish_CI_AS</DefaultCollation>
+    <DefaultFilegroup>PRIMARY</DefaultFilegroup>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="Procedimientos" />
+    <Folder Include="Tablas" />
+    <Folder Include="Vistas" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="Procedimientos\CustOrderHist.sql" />
+    <Build Include="Procedimientos\CustOrdersDetail.sql" />
+    <Build Include="Procedimientos\CustOrdersOrders.sql" />
+    <Build Include="Procedimientos\Employee Sales by Country.sql" />
+    <Build Include="Procedimientos\GetCustomerChangesByRowVersion.sql" />
+    <Build Include="Procedimientos\GetDatabaseRowVersion.sql" />
+    <Build Include="Procedimientos\GetEmployeeChangesByRowVersion.sql" />
+    <Build Include="Procedimientos\GetProductChangesByRowVersion.sql" />
+    <Build Include="Procedimientos\Sales by Year.sql" />
+    <Build Include="Procedimientos\SalesByCategory.sql" />
+    <Build Include="Procedimientos\Ten Most Expensive Products.sql" />
+    <Build Include="Tablas\Categories.sql" />
+    <Build Include="Tablas\CustomerCustomerDemo.sql" />
+    <Build Include="Tablas\CustomerDemographics.sql" />
+    <Build Include="Tablas\Customers.sql" />
+    <Build Include="Tablas\Employees.sql" />
+    <Build Include="Tablas\EmployeeTerritories.sql" />
+    <Build Include="Tablas\OrderDetails.sql" />
+    <Build Include="Tablas\Orders.sql" />
+    <Build Include="Tablas\Products.sql" />
+    <Build Include="Tablas\Region.sql" />
+    <Build Include="Tablas\Shippers.sql" />
+    <Build Include="Tablas\Suppliers.sql" />
+    <Build Include="Tablas\Territories.sql" />
+    <Build Include="Vistas\Alphabetical list of products.sql" />
+    <Build Include="Vistas\Category Sales for 1997.sql" />
+    <Build Include="Vistas\Current Product List.sql" />
+    <Build Include="Vistas\Customer and Suppliers by City.sql" />
+    <Build Include="Vistas\Invoices.sql" />
+    <Build Include="Vistas\Order Details Extended.sql" />
+    <Build Include="Vistas\Order Subtotals.sql" />
+    <Build Include="Vistas\Orders Qry.sql" />
+    <Build Include="Vistas\Product Sales for 1997.sql" />
+    <Build Include="Vistas\Products Above Average Price.sql" />
+    <Build Include="Vistas\Products by Category.sql" />
+    <Build Include="Vistas\Quarterly Orders.sql" />
+    <Build Include="Vistas\Sales by Category.sql" />
+    <Build Include="Vistas\Sales Totals by Amount.sql" />
+    <Build Include="Vistas\Summary of Sales by Quarter.sql" />
+    <Build Include="Vistas\Summary of Sales by Year.sql" />
+  </ItemGroup>
+</Project>
