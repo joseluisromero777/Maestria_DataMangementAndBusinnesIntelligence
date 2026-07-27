@@ -37,5 +37,6 @@ NorthWindOLTP/
 ├── Properties/              # Configuración y propiedades del proyecto de base de datos
 ├── Referencias/             # Dependencias y referencias de la base de datos
 ├── Procedimientos/          # Procedimientos almacenados para lógica de negocio
+├── BaseDatos/               # Archivo comprimido zip de la Base de datos NorthWind.mdf y NorthWind_log.ldf
 ├── Tablas/                  # Definición de tablas relacionales (Categories, Customers, Employees, Orders, OrderDetails, etc.)
 └── Vistas/                  # Vistas del sistema (Invoices, SalesByCategory, etc.)
